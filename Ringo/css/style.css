@@ -1,0 +1,231 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  background-color: #FFFFFF;
+  color: #282B22;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-family: Lato, system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 120%;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: Raleway, system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 46px;
+  line-height: 125%;
+  color: #282B22;
+}
+
+h3 {
+  font-family: Raleway, system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 130%;
+  color: #282B22;
+}
+
+h4 {
+  font-family: Raleway, system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
+  color: #282B22;
+}
+
+h5 {
+  font-family: Raleway, system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  color: #282B22;
+}
+
+.h5_m {
+  font-family: Raleway, system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130%;
+  color: #282B22;
+}
+
+p {
+  font-family: Raleway, system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #282B22;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1250px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+
+.site-button {
+  border: none;
+  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+  background: #AE7B3C;
+  padding: 22px 15px;
+  width: 260px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Raleway, system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: #FFFFFF;
+}
+.site-button:hover {
+  background: #CC9654;
+}
+
+.header {
+  height: 93px;
+}
+
+.header__container {
+  height: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header__nav li {
+  margin-right: 40px;
+}
+.header__nav li a {
+  font-family: Raleway, system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #282B22;
+}
+.header__nav li a:hover {
+  color: #AE7B3C;
+}
+.header__nav li:last-child {
+  margin-right: 0;
+}
+
+.contact__social {
+  margin-right: 48px;
+}
+.contact__social a {
+  margin-right: 15px;
+}
+.contact__social svg:hover path {
+  fill: #282B22;
+}
+
+.contact__phone img {
+  margin-right: 7px;
+}
+.contact__phone span {
+  font-family: Lato, system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #282B22;
+}
+.contact__phone a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.intro__swiper {
+  height: 683px;
+}
+
+.intro__slide {
+  position: relative;
+}
+.intro__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.intro__content {
+  max-width: 540px;
+  position: absolute;
+  margin-bottom: 120px;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.intro__content p {
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.intro__content .site-button {
+  display: flex;
+  margin: 0 auto;
+}
+
+.intro__swiper-nav {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1250px;
+  padding: 0 25px;
+  height: 102px;
+  border-top: 1px solid #FFFFFF;
+}

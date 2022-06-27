@@ -1,0 +1,177 @@
+@import "_mixin.scss";
+
+html{
+    box-sizing: border-box;
+}
+
+*, *::before , *::after {
+    box-sizing: inherit;
+}
+
+$black:#282B22;
+$green:#3D4A39;
+$brown:#AE7B3C;
+$gray:#F3F3F3;
+$white:#FFFFFF;
+
+body{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    background-color: $white;
+    color: $black;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+h1{
+    @include font-l (700,56px,120%,$white);
+    text-align: center;
+    text-transform: uppercase;
+}
+h2{
+    @include font-r (600,46px,125%);
+}
+h3{
+    @include font-r (600,36px,130%);    
+}
+h4{
+    @include font-r (600,32px,130%);
+}
+h5{
+    @include font-r (600,24px,100%);
+}
+.h5_m{
+    @include font-r (500,24px,130%);
+}
+p{
+    @include font-r(500,18px,27px);
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container{
+    width: 100%;
+    max-width: 1250px;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+
+.site-button{
+    border: none;
+    box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.05);
+    background: $brown;
+    padding: 22px 15px;
+    width: 260px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    @include font-r (700,16px,100%,$white);
+    &:hover{
+        background: #CC9654;
+    }
+}
+
+.header{
+    height: 93px;
+}
+
+.header__container{
+    height: 100%;
+    justify-content: space-between;
+    @include flex;
+}
+
+.header__nav {
+    ul{
+        @include flex; 
+    }
+    li{
+        margin-right: 40px;
+        a{
+            @include font-r(500,16px,16px);
+            &:hover{
+                color: $brown;
+            }
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+.contact__social{
+    margin-right: 48px;
+    a{
+        margin-right: 15px;
+    }
+    svg:hover{
+        path{
+            fill: $black;
+        }
+    }
+}
+
+.contact__phone{
+    img{
+        margin-right: 7px;
+    }
+    span{
+        @include font-l(600,20px,100%);
+    }
+    a{
+        @include flex;
+    }
+}
+
+.header__contacts{
+    @include flex;
+}
+
+
+.intro__swiper{
+    height: 683px;
+}
+.intro__slide{
+    position: relative;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.intro__content{
+    max-width: 540px;
+    position: absolute;
+    margin-bottom: 120px;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    p{
+        color: $white;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    .site-button{
+        display: flex;
+        margin: 0 auto;
+    }
+}
+.intro__swiper-nav{
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1250px;
+    padding: 0 25px;
+    height: 102px;
+    border-top: 1px solid $white;
+}
