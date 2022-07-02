@@ -22,10 +22,19 @@ const swiper = new Swiper('.intro__swiper', {
 
   const swiper2 = new Swiper('.work__swiper', {
     loop: true,
-    slidesPerView: 1,
+    slidesPerView: "auto",
+    spaceBetween: 40,
 
     navigation: {
       nextEl: '.work__button-next',
       prevEl: '.work__button-prev',
     },
+    centeredSlides: true,
+  });
+
+
+
+  //accept
+  document.querySelector('.contacts__checkbox-wrap').addEventListener('click', () => {
+    document.querySelector('.accept>span').classList.toggle('accept-active');
   });
