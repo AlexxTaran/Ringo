@@ -1,5 +1,4 @@
 @import "_mixin.scss";
-
 html{
     box-sizing: border-box;
 }
@@ -137,6 +136,32 @@ main{
     }
 }
 
+.burger{
+    display: none;
+    position: relative;
+    width: 26px;
+    height: 20px;
+    span{
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $black;
+    }
+    .burger-line_first{
+        top: 0;
+    }
+    .burger-line_second{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .burger-line_third{
+        bottom: 0;
+    }
+}
+.burger__nav-mobile{
+    display: none;
+}
+
 .header__contacts{
     @include flex;
 }
@@ -243,6 +268,7 @@ main{
     h2{
         text-align: center;
         margin-bottom: 80px;
+        text-transform: uppercase;
     }
 }
 .direction__cards{
@@ -285,7 +311,7 @@ main{
 .products__cards{
     display: grid;
     grid-template-columns: repeat(3,2fr);
-    gap: 70px 215px;
+    gap: 70px 55px;
 }
 .products__card{
     text-align: center;
@@ -410,7 +436,6 @@ main{
     }
 }
 .benefits__image-wrap{
-    width: 50%;
     h5{
         opacity: .5;
     }
@@ -434,7 +459,7 @@ main{
     .contacts__text-wrap{
         background-color: $green;
         height: 100%;
-        padding: 100px 0;
+        padding: 100px 20px;
     }
 }
 .contacts__form{
@@ -489,8 +514,9 @@ main{
     }
     p{
         max-width: 306px;
-        color: $white;
         margin-bottom: 40px; 
+        opacity: .8;
+        @include font-r (500,16px,145%,$white);
     }
 }
 .contacts__checkbox-wrap{
@@ -636,6 +662,9 @@ main{
         }
     }
 }
+.work__pagination{
+    display: none;
+}
 
 //footer
 .footer__inform{
@@ -728,18 +757,12 @@ main{
     .intro__content-first{
         h1{
             max-width: 750px;
-            margin: 0 auto;
+            margin: 0 auto 20px;
         }
         p{
             max-width: 510px;
             opacity: 0.8;
         }
-    }
-    .products__container{
-        padding-right: 40px;
-    }
-    .products__cards{
-        gap: 70px;
     }
     .about__container{
         border-bottom: none;
@@ -750,16 +773,366 @@ main{
             border-bottom: 1px solid rgba(0, 0, 0, 0.1803921569);
         }
     }
-    .contacts__pic{
-        width: 50%;
-        img{
-            height: 690px;
-            object-fit: cover;
-        }
-    }
+}
+
+@media screen and (max-width: 1100px) {
     .steps__cards{
         grid-template-columns: repeat(2, 240px);
         gap: 60px 140px;
         justify-content: center;
+    }
+    .direction__cards{
+        align-items: end;
+    }
+    .benefits__image-wrap{
+        img{
+            left: 84px;
+        }
+    }
+    .footer__brands_wrap{
+        grid-template-columns: repeat(7, 1fr);
+    }
+}
+
+@media screen and (max-width: 999px){
+    .header__nav{
+        display: none;
+    }
+
+    .header__nav-active{
+        display: block;
+        position: fixed;
+        top: 93px;
+        right: 0;
+        z-index: 3;
+        background-color: $white;
+        width: 50%;
+        height: 100%;
+        padding: 30px 0;
+        ul{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        li{
+            margin: 25px;
+        }
+    }
+
+    .burger{
+        display: block;
+    }
+    .burger-active{
+        span{
+            top: 50%;
+            left: 50%;
+            transition: .3s linear;
+        }
+        .burger-line_first{
+            top: 50%;
+            transform: translate(-50%,-50%) rotate(-45deg);
+        }
+        .burger-line_second{
+            display: none;
+        }
+        .burger-line_third{
+            bottom: unset;
+            transform: translate(-50%,-50%) rotate(45deg);
+        }
+    }
+    .direction__cards{
+        grid-template-columns: repeat(2, 2fr);
+        grid-row-gap: 60px;
+    }
+    .benefits__image-wrap{
+        img{
+            top: 5px;
+            width: 280px;
+        }
+    }
+    .footer__inform{
+        flex-wrap: wrap;
+    }
+    .footer__column{
+        margin-right: 20px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    .footer__menu{
+        column-gap: 25px;
+    }
+}
+
+@media screen and (max-width: 799px){
+    main section{
+        margin-bottom: 100px;
+    }
+
+    h2{
+        font-size: 36px;
+    }
+    .intro__slide img{
+        object-position: 70%;
+        &:nth-child(2){
+            object-position: left;
+        }
+    }
+    .intro__content-first{
+        max-width: 500px;
+        top: 74px;
+    }
+    .direction__card:nth-child(1){
+        padding: 0 20px
+    }
+    .direction__card:nth-child(2){
+        padding: 0 0 0 20px;
+    }
+    .direction__card:nth-child(3){
+        padding: 0 20px;
+        border-right: none; 
+    }
+    .products__card{
+        h5{
+            font-size: 18px;
+        }
+    }
+    .about{
+        h3{
+            font-size: 28px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+    .benefits__content{
+        h4{
+            font-size: 28px;
+        }
+        p{
+            @include font-r(400,16px,135%);
+        }
+    }
+    .benefits__card:first-child{
+        img{
+            top: 10px;
+        }
+    }
+    .benefits__image-wrap{
+        img{
+            width: 244px;
+            top: 25px;
+            left: 50px;
+        }
+    }
+    .contacts__pic img{
+        object-position: left;
+    }
+    .steps__cards{
+        gap: 60px;
+    }
+    .work__button_wrap{
+        max-width: 630px;
+    }
+    .footer{
+        >.container{
+            padding: 0 15px;
+        }
+    }
+    .footer__column:nth-child(2){
+        margin-right: 0;
+    }
+    .footer__column:last-child{
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 60px;
+        a{
+            margin-bottom: 0;
+        }
+    }
+    .footer__brands_wrap{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 599px){
+    main section{
+        margin-bottom: 80px;
+    }
+    .header__contacts{
+        display: none;
+    }
+    .header__nav-active{
+        width: 100%;
+    }
+
+    .burger__nav-mobile{
+        display: block;
+        margin:15px 25px 0 25px;
+        .contact__social{
+            margin-bottom: 100px;
+        }
+        .contact__phone{
+            margin-bottom: 30px;
+        }
+    }
+
+
+    .intro__content{
+        padding: 0 12px;
+        max-width: 300px;
+        h1{
+            font-size: 28px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 145%;
+            opacity: 0.8;
+        }
+    }
+    .intro__button-wrap{
+        display: none;
+    }
+    .intro__pagination{
+        justify-content: center;
+    }
+
+
+    .direction .container{
+        padding: 0 10px;
+    }
+    .direction__cards{
+        grid-template-columns: repeat(1, 1fr);
+        .direction__card{
+            border-left: none;
+            padding: 0;
+            h5{
+                @include font-r(600,20px,145%);
+            }
+            span{
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .products__cards{
+        grid-template-columns: repeat(2 , 1fr);
+        gap: 55px;
+    }
+
+
+    .about h3 {
+        font-size: 20px;
+    }
+    .about__cards{
+        grid-template-columns: repeat(1, 1fr);
+        border-top: none;
+        padding: 0;
+        &::before{
+            content: none;
+        }
+    }
+    .about__card:first-child{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1803921569);
+        border-top: 1px solid rgba(0, 0, 0, 0.1803921569);
+    }
+    .about__card{
+        padding: 30px 0 30px 33px;
+        i{
+            top: 30px;
+        }
+    }
+
+
+    .benefits__card{
+        grid-template-columns: 0.1fr 1fr;
+        align-items: start;
+        column-gap: 15px;
+        &::before{
+            content: none;
+        }
+        .benefits__image-wrap{
+            padding: 50px 0;
+            img{
+                display: none;
+            }
+        }
+    }
+
+
+    .contacts {
+        grid-template-columns: repeat(1,1fr);
+        .contacts__text-wrap{
+            padding: 60px 10px;
+        }
+    }    
+    .contacts__pic img{
+        height: 360px;
+        object-position: center;
+    }
+
+
+    .steps{
+        h2{
+            font-size: 24px;
+        }
+    }
+    .steps__cards{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+
+    .work__button{
+        display: none;
+    }
+    .work__slide img{
+        height: 220px;
+        width: 95%;
+        padding: 10px;
+    }
+    .work__content{
+        padding-left: 10px;
+    }
+    .work__slide_shadow{
+        display: none;
+    }
+    .work__pagination{
+        display: flex;
+        justify-content: space-between;
+        max-width: 100px;
+        margin-top: 30px;
+        padding: 0 10px;
+        .work__pagination_bullet{
+            display: inline;
+            background-color: #282b225c;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        .work__pagination_bullet-active{
+            background-color: $brown;
+        }
+    }
+
+
+    .footer__inform{
+        margin-bottom: 0;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #282b225c;
+        &::after{
+            content: none;
+        }
+    }
+    .footer__column:first-child{
+        margin-bottom: 50px;
+    }
+    .footer__column:last-child{
+        flex-direction: column;
+        align-items: start;
+        a{
+            margin-bottom: 25px;
+        }
     }
 }
