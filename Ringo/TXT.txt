@@ -1,0 +1,17 @@
+<div class="clearfix pbs"><svg class="icon icon-b"><use xlink:href="#icon-b"></use></svg></div>
+
+                <div class="clearfix pbs"><svg class="icon icon-brand-3"><use xlink:href="#icon-brand-3"></use></svg></div>
+
+                <div class="clearfix pbs"><svg class="icon icon-brand-4"><use xlink:href="#icon-brand-4"></use></svg></div>
+
+                <div class="clearfix pbs"><svg class="icon icon-brand-2"><use xlink:href="#icon-brand-2"></use></svg></div>
+
+                <div class="clearfix pbs"><svg class="icon icon-brand-5"><use xlink:href="#icon-brand-5"></use></svg></div>
+
+                <div class="clearfix pbs"><svg class="icon icon-brand-1"><use xlink:href="#icon-brand-1"></use></svg></div>
+
+                <div class="clearfix pbs"><svg class="icon icon-brand-6"><use xlink:href="#icon-brand-6"></use></svg></div>
+
+                <div class="clearfix pbs"><svg class="icon icon-brand-8"><use xlink:href="#icon-brand-8"></use></svg></div>
+
+                <div class="clearfix pbs"><svg class="icon icon-brand-7"><use xlink:href="#icon-brand-7"></use></svg></div>

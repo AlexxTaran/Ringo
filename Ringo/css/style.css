@@ -598,10 +598,12 @@ main section {
   position: absolute;
   top: -38px;
   left: 144px;
+  z-index: 1;
 }
 
 .benefits__content {
   padding: 50px 0;
+  z-index: 2;
 }
 
 .contacts {
@@ -953,6 +955,9 @@ main section {
   gap: 38px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.34);
   padding: 38px 0;
+}
+.footer__brands_wrap svg:hover path {
+  fill: rgb(255, 164, 0);
 }
 
 .footer__copyright {
@@ -1591,4 +1596,15 @@ main section {
 .form__closed_line-second {
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.brand-1-active, .brand-2-active, .brand-3-active, .brand-4-active, .brand-5-active, .brand-6-active, .brand-7-active, .brand-8-active, .brand-9-active {
+  display: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.brand-6-active {
+  height: 46px;
+  width: 40px;
 }

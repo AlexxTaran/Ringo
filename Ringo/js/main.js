@@ -122,3 +122,85 @@ document.querySelectorAll('.site-button_form').forEach(fEl => {
 document.querySelector('.form__closed').addEventListener('click', () => {
   document.querySelector('.form_pop').classList.remove('form_pop-active');
 });
+
+//////
+document.querySelector('.brand-1').addEventListener('mouseover', () =>{
+  document.querySelector('.brand-1').style.display = "none";
+  document.querySelector('.brand-1-active').style.display = "block";
+});
+document.querySelector('.brand-1').addEventListener('mouseout', () =>{
+  document.querySelector('.brand-1').style.display = "block";
+  document.querySelector('.brand-1-active').style.display = "none";
+});
+
+document.querySelector('.brand-2').addEventListener('mouseover', () =>{
+  document.querySelector('.brand-2').style.display = "none";
+  document.querySelector('.brand-2-active').style.display = "block";
+});
+document.querySelector('.brand-2').addEventListener('mouseout', () =>{
+  document.querySelector('.brand-2').style.display = "block";
+  document.querySelector('.brand-2-active').style.display = "none";
+});
+
+document.querySelector('.brand-3').addEventListener('mouseover', () =>{
+  document.querySelector('.brand-3').style.display = "none";
+  document.querySelector('.brand-3-active').style.display = "block";
+});
+document.querySelector('.brand-3').addEventListener('mouseout', () =>{
+  document.querySelector('.brand-3').style.display = "block";
+  document.querySelector('.brand-3-active').style.display = "none";
+});
+
+document.querySelector('.brand-4').addEventListener('mouseover', () =>{
+  document.querySelector('.brand-4').style.display = "none";
+  document.querySelector('.brand-4-active').style.display = "block";
+});
+document.querySelector('.brand-4').addEventListener('mouseout', () =>{
+  document.querySelector('.brand-4').style.display = "block";
+  document.querySelector('.brand-4-active').style.display = "none";
+});
+
+// document.querySelector('.brand-5').addEventListener('mouseover', () =>{
+//   document.querySelector('.brand-5').style.display = "none";
+//   document.querySelector('.brand-5-active').style.display = "block";
+// });
+// document.querySelector('.brand-5').addEventListener('mouseout', () =>{
+//   document.querySelector('.brand-5').style.display = "block";
+//   document.querySelector('.brand-5-active').style.display = "none";
+// });
+
+document.querySelector('.brand-6').addEventListener('mouseover', () =>{
+  document.querySelector('.brand-6').style.display = "none";
+  document.querySelector('.brand-6-active').style.display = "block";
+});
+document.querySelector('.brand-6').addEventListener('mouseout', () =>{
+  document.querySelector('.brand-6').style.display = "block";
+  document.querySelector('.brand-6-active').style.display = "none";
+});
+
+document.querySelector('.brand-7').addEventListener('mouseover', () =>{
+  document.querySelector('.brand-7').style.display = "none";
+  document.querySelector('.brand-7-active').style.display = "block";
+});
+document.querySelector('.brand-7').addEventListener('mouseout', () =>{
+  document.querySelector('.brand-7').style.display = "block";
+  document.querySelector('.brand-7-active').style.display = "none";
+});
+
+document.querySelector('.brand-8').addEventListener('mouseover', () =>{
+  document.querySelector('.brand-8').style.display = "none";
+  document.querySelector('.brand-8-active').style.display = "block";
+});
+document.querySelector('.brand-8').addEventListener('mouseout', () =>{
+  document.querySelector('.brand-8').style.display = "block";
+  document.querySelector('.brand-8-active').style.display = "none";
+});
+
+document.querySelector('.brand-9').addEventListener('mouseover', () =>{
+  document.querySelector('.brand-9').style.display = "none";
+  document.querySelector('.brand-9-active').style.display = "block";
+});
+document.querySelector('.brand-9').addEventListener('mouseout', () =>{
+  document.querySelector('.brand-9').style.display = "block";
+  document.querySelector('.brand-9-active').style.display = "none";
+});
