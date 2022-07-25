@@ -1,6 +1,7 @@
 @import "_mixin.scss";
 html{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *, *::before , *::after {
@@ -12,6 +13,20 @@ $green:#3D4A39;
 $brown:#AE7B3C;
 $gray:#F3F3F3;
 $white:#FFFFFF;
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px $green inset !important;
+}
+input:-webkit-autofill{
+    -webkit-text-fill-color: $white !important;
+}
 
 body{
     font-style: normal;
@@ -470,16 +485,34 @@ main{
         width: 100%;
         max-width: 300px;
     }
-    input[type="text"]{
+    input[type="text"] , input[type="number"]{
         width: 100%;
         background-color: $green;
         border: none;
         border-bottom: 1px solid #ffffff24;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         padding-bottom: 10px;
+        color: $white;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
     }
     input[type="file"]{
         display: none;
+    }
+
+    .form-field_incorrect{
+        position: relative;
+        input{
+            color: #E11616;
+            border-bottom: 1px solid #E11616;
+
+            &::placeholder{
+                color: #E11616;
+            }
+        }
     }
 }
 .contacts__pic{
@@ -491,7 +524,7 @@ main{
     }
 }
 .userFile{
-    margin-bottom: 40px;
+    margin: 10px 0 40px 0;
     opacity: .5;
     img{
         margin-right: 10px;
@@ -547,6 +580,13 @@ main{
     }
 }
 
+.error-field-message{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 10px;
+    @include font-r(400,12px,100%,#E11616);
+}
 // steps
 .steps__container{
     h2{
@@ -748,6 +788,143 @@ main{
     }
 }
 
+//----------animation-----------
+.js-scroll_container{
+    position: absolute;
+    width: 160px;
+    overflow: hidden;
+    &:nth-child(1){
+        top: -40px;
+        left: -80px;
+        .js-scroll{
+            opacity: 0;
+            transition: .5s linear;
+            transform: translateX(-200px);
+        }
+    }
+    &:nth-child(2){
+        right: -80px;
+        bottom: 96px;
+        .js-scroll{
+            opacity: 0;
+            transition: .5s linear;
+            transform: translateX(200px);
+        }
+    }
+}
+.js-scroll_active{
+    &:nth-child(1){
+        top: -40px;
+        left: -80px;
+        .js-scroll{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    &:nth-child(2){
+        right: -80px;
+        bottom: 96px;
+        .js-scroll{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+.title_active{
+    opacity: 1;
+    transform: translateY(0);
+}
+//--------animation end----------
+
+//popUp's and other
+.form_pop{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: .3s linear;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+.form_pop-active{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.form_pop_wrap{
+    position: fixed;
+    width: 460px;
+    background-color: $green;
+    padding: 60px;
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    h4{
+        color: $white;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    p{
+        text-align: center;
+        opacity: .8;
+        @include font-r(500,16px,145%,$white);
+    }
+    form{
+        margin-top: 45px;
+    }
+    textarea{
+        width: 100%;
+        background-color: $green;
+        border: none;
+        padding-bottom: 60px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #ffffff24;
+    }
+    .contacts__checkbox-wrap p{
+        font-size: 12px;
+        line-height: 130%;
+        padding-left: 0;
+    }
+}
+.form__closed{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 0;
+    right: -50px;
+    padding: 6px;
+    z-index: 6;
+    cursor: pointer;
+}
+.form__closed_line{
+    position: absolute;
+    width: 2px;
+    height: 23.33px;
+    top: 50%;
+    left: 50%;
+    background-color: $white;
+    transform: translate(-50% , -50%);
+}
+.form__closed_line-first{
+    transform: translate(-50% , -50%) rotate(-45deg);
+}
+.form__closed_line-second{
+    transform: translate(-50% , -50%) rotate(45deg);
+}
+
+
+//brands active
+.brand-1-active , .brand-2-active ,.brand-8-active{
+    display: none;
+    object-fit: cover;
+}
+
 //adaptive
 @media screen and (max-width: 1400px) {
     .header__nav li{
@@ -769,15 +946,26 @@ main{
     }
     .about__container{
         border-bottom: none;
-        img{
-            display: none;
-        }
         .about__cards{
             border-bottom: 1px solid rgba(0, 0, 0, 0.1803921569);
         }
     }
+    .js-scroll_active:nth-child(1){
+        left: 0;
+    }
+    .js-scroll_active:nth-child(2){
+        right: 0;
+    }
 }
-
+@media screen and (max-width: 1200px){
+    .js-scroll_active:nth-child(1){
+        top: 0;
+        left: -10px;
+    }
+    .js-scroll_active:nth-child(2){
+        top: 50px;
+    }
+} 
 @media screen and (max-width: 1100px) {
     .steps__cards{
         grid-template-columns: repeat(2, 240px);
@@ -795,6 +983,9 @@ main{
     .footer__brands_wrap{
         grid-template-columns: repeat(7, 1fr);
     }
+    .js-scroll_active{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 999px){
@@ -811,7 +1002,8 @@ main{
         background-color: $white;
         width: 50%;
         height: 100%;
-        padding: 30px 0;
+        padding: 40px 0;
+        margin-top: -10px;
         ul{
             flex-direction: column;
             align-items: flex-start;
@@ -1139,153 +1331,27 @@ main{
         }
     }
 
-
     .form_pop_wrap{
-        width: 320px;
-        padding: 60px 10px;
-        height: 620px;
+        width: 100%;
+        height: 600px;
+        padding: 45px 10px;
+        h4{
+            font-size: 24px;
+            line-height: 100%;
+        }
+    }
+    .contacts__form{
+        div , button{
+            max-width: unset;
+        }
+    }
+    .contacts__checkbox-wrap p{
+        text-align: left;
+        margin-left: 25px;
     }
     .form__closed{
         right: 0;
-    }
-}
-
-//----------animation-----------
-.js-scroll_container{
-    position: absolute;
-    width: 160px;
-    overflow: hidden;
-    &:nth-child(1){
         top: -40px;
-        left: -80px;
-        .js-scroll{
-            opacity: 0;
-            transition: .5s linear;
-            transform: translateX(-200px);
-        }
-    }
-    &:nth-child(2){
-        right: -80px;
-        bottom: 96px;
-        .js-scroll{
-            opacity: 0;
-            transition: .5s linear;
-            transform: translateX(200px);
-        }
-    }
-}
-.js-scroll_active{
-    &:nth-child(1){
-        top: -40px;
-        left: -80px;
-        .js-scroll{
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-    &:nth-child(2){
-        right: -80px;
-        bottom: 96px;
-        .js-scroll{
-            opacity: 1;
-            transform: translateX(0);
-        }
     }
 }
 
-.title_active{
-    opacity: 1;
-    transform: translateY(0);
-}
-//--------animation end----------
-
-//popUp's and other
-.form_pop{
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: .3s linear;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(5px);
-}
-.form_pop-active{
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.form_pop_wrap{
-    position: fixed;
-    width: 460px;
-    background-color: $green;
-    padding: 60px;
-    z-index: 6;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    h4{
-        color: $white;
-        text-align: center;
-        margin-bottom: 25px;
-    }
-    p{
-        text-align: center;
-        @include font-r(500,16px,145%,$white);
-    }
-    form{
-        margin-top: 45px;
-    }
-    textarea{
-        width: 100%;
-        background-color: $green;
-        border: none;
-        padding-bottom: 60px;
-        margin-bottom: 40px;
-        border-bottom: 1px solid #ffffff24;
-    }
-    .contacts__checkbox-wrap p{
-        font-size: 12px;
-        line-height: 130%;
-        padding-left: 0;
-    }
-}
-.form__closed{
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    top: 0;
-    right: -50px;
-    padding: 6px;
-    z-index: 6;
-    cursor: pointer;
-}
-.form__closed_line{
-    position: absolute;
-    width: 2px;
-    height: 23.33px;
-    top: 50%;
-    left: 50%;
-    background-color: $white;
-    transform: translate(-50% , -50%);
-}
-.form__closed_line-first{
-    transform: translate(-50% , -50%) rotate(-45deg);
-}
-.form__closed_line-second{
-    transform: translate(-50% , -50%) rotate(45deg);
-}
-
-//brands active
-.brand-1-active , .brand-2-active , .brand-3-active ,.brand-4-active ,.brand-5-active ,.brand-6-active ,.brand-7-active ,.brand-8-active ,.brand-9-active{
-    display: none;
-    object-fit: cover;
-}
-.brand-6-active{
-    height: 46px;
-    width: 40px;
-}
-//---------
