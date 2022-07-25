@@ -1,0 +1,24 @@
+$default-ui-system-fonts: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif;
+@mixin font-l ($fw, $fs , $lh ,$color:#282B22){
+    font-family: Lato, $default-ui-system-fonts;
+	font-style: normal;
+	font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $color;
+}
+
+@mixin font-r ($fw , $fs , $lh , $color:#282B22){
+    font-family: Raleway, $default-ui-system-fonts;
+	font-style: normal;
+	font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    color: $color;
+}
+
+@mixin flex ($fd:row,$ai:center){
+    display: flex;
+    flex-direction: $fd;
+    align-items: $ai;
+}

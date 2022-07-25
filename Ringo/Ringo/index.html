@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="#!" class="header__logo"><img src="./image/logo.svg" alt="image"></a>
+            <nav class="header__nav">
+                <ul>
+                    <li><a id="smoothScroll" href="#direction">Directions</a></li>
+                    <li><a id="smoothScroll" href="#about">About the company</a></li>
+                    <li><a id="smoothScroll" href="#benefits">Benefits</a></li>
+                    <li><a id="smoothScroll" href="#steps">Stages of work</a></li>
+                </ul>
+                <div class="burger__nav-mobile">
+                    <div class="contact__social">
+                        <a href="#!"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.9469 8.305C20.9369 7.54762 20.7951 6.79777 20.5279 6.089C20.2963 5.49115 19.9425 4.9482 19.4891 4.49483C19.0358 4.04146 18.4928 3.68765 17.8949 3.456C17.1953 3.19336 16.4561 3.05134 15.7089 3.036C14.7469 2.993 14.4419 2.981 11.9999 2.981C9.55795 2.981 9.24495 2.981 8.28995 3.036C7.54311 3.05145 6.8043 3.19347 6.10495 3.456C5.50701 3.68749 4.96397 4.04124 4.51058 4.49463C4.05719 4.94802 3.70344 5.49106 3.47195 6.089C3.20878 6.78813 3.06707 7.52711 3.05295 8.274C3.00995 9.237 2.99695 9.542 2.99695 11.984C2.99695 14.426 2.99695 14.738 3.05295 15.694C3.06795 16.442 3.20895 17.18 3.47195 17.881C3.70383 18.4788 4.05784 19.0216 4.51138 19.4748C4.96492 19.928 5.50801 20.2816 6.10595 20.513C6.80338 20.7862 7.54232 20.9384 8.29095 20.963C9.25395 21.006 9.55895 21.019 12.0009 21.019C14.4429 21.019 14.7559 21.019 15.7109 20.963C16.4581 20.9483 17.1973 20.8066 17.8969 20.544C18.4946 20.3121 19.0375 19.9582 19.4908 19.5048C19.9441 19.0515 20.298 18.5087 20.5299 17.911C20.7929 17.211 20.9339 16.473 20.9489 15.724C20.9919 14.762 21.0049 14.457 21.0049 12.014C21.0029 9.572 21.0029 9.262 20.9469 8.305ZM11.9939 16.602C9.43995 16.602 7.37095 14.533 7.37095 11.979C7.37095 9.425 9.43995 7.356 11.9939 7.356C13.22 7.356 14.3959 7.84306 15.2629 8.71004C16.1299 9.57703 16.6169 10.7529 16.6169 11.979C16.6169 13.2051 16.1299 14.381 15.2629 15.248C14.3959 16.1149 13.22 16.602 11.9939 16.602ZM16.8009 8.263C16.6593 8.26313 16.5191 8.23534 16.3883 8.18121C16.2574 8.12708 16.1385 8.04768 16.0384 7.94755C15.9383 7.84743 15.8589 7.72854 15.8047 7.59769C15.7506 7.46684 15.7228 7.3266 15.7229 7.185C15.7229 7.0435 15.7508 6.90339 15.805 6.77266C15.8591 6.64193 15.9385 6.52315 16.0385 6.42309C16.1386 6.32304 16.2574 6.24367 16.3881 6.18952C16.5188 6.13537 16.6589 6.1075 16.8004 6.1075C16.9419 6.1075 17.0821 6.13537 17.2128 6.18952C17.3435 6.24367 17.4623 6.32304 17.5624 6.42309C17.6624 6.52315 17.7418 6.64193 17.7959 6.77266C17.8501 6.90339 17.8779 7.0435 17.8779 7.185C17.8779 7.781 17.3959 8.263 16.8009 8.263Z" fill="#AE7B3C"/>
+                            <path d="M11.994 14.982C13.6525 14.982 14.997 13.6375 14.997 11.979C14.997 10.3205 13.6525 8.976 11.994 8.976C10.3355 8.976 8.99097 10.3205 8.99097 11.979C8.99097 13.6375 10.3355 14.982 11.994 14.982Z" fill="#AE7B3C"/>
+                            </svg>
+                            
+                            </a>
+                        <a href="#!"><svg width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_212_157)">
+                            <path d="M2.55277 20.5746V10.9204H0V7.44441H2.55277V4.47548C2.55277 2.14247 4.0607 0 7.53529 0C8.9421 0 9.98237 0.134866 9.98237 0.134866L9.9004 3.38083C9.9004 3.38083 8.83949 3.3705 7.68178 3.3705C6.42879 3.3705 6.22804 3.94793 6.22804 4.90631V7.44441H10L9.83588 10.9204H6.22804V20.5746H2.55277Z" fill="#AE7B3C"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_212_157">
+                            <rect width="10" height="20.5746" fill="white"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            </a>
+                    </div>
+                    <div class="contact__phone">
+                        <a href="#!"><img src="./image/phone.svg" alt="image"><span>+380 67661 5415</span></a>
+                    </div>
+                    <a href="#!" class="site-button site-button_form">Discuss project</a>
+                </div>
+            </nav>
+            <div class="header__contacts">
+                <div class="contact__social">
+                    <a href="#!"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.9469 8.305C20.9369 7.54762 20.7951 6.79777 20.5279 6.089C20.2963 5.49115 19.9425 4.9482 19.4891 4.49483C19.0358 4.04146 18.4928 3.68765 17.8949 3.456C17.1953 3.19336 16.4561 3.05134 15.7089 3.036C14.7469 2.993 14.4419 2.981 11.9999 2.981C9.55795 2.981 9.24495 2.981 8.28995 3.036C7.54311 3.05145 6.8043 3.19347 6.10495 3.456C5.50701 3.68749 4.96397 4.04124 4.51058 4.49463C4.05719 4.94802 3.70344 5.49106 3.47195 6.089C3.20878 6.78813 3.06707 7.52711 3.05295 8.274C3.00995 9.237 2.99695 9.542 2.99695 11.984C2.99695 14.426 2.99695 14.738 3.05295 15.694C3.06795 16.442 3.20895 17.18 3.47195 17.881C3.70383 18.4788 4.05784 19.0216 4.51138 19.4748C4.96492 19.928 5.50801 20.2816 6.10595 20.513C6.80338 20.7862 7.54232 20.9384 8.29095 20.963C9.25395 21.006 9.55895 21.019 12.0009 21.019C14.4429 21.019 14.7559 21.019 15.7109 20.963C16.4581 20.9483 17.1973 20.8066 17.8969 20.544C18.4946 20.3121 19.0375 19.9582 19.4908 19.5048C19.9441 19.0515 20.298 18.5087 20.5299 17.911C20.7929 17.211 20.9339 16.473 20.9489 15.724C20.9919 14.762 21.0049 14.457 21.0049 12.014C21.0029 9.572 21.0029 9.262 20.9469 8.305ZM11.9939 16.602C9.43995 16.602 7.37095 14.533 7.37095 11.979C7.37095 9.425 9.43995 7.356 11.9939 7.356C13.22 7.356 14.3959 7.84306 15.2629 8.71004C16.1299 9.57703 16.6169 10.7529 16.6169 11.979C16.6169 13.2051 16.1299 14.381 15.2629 15.248C14.3959 16.1149 13.22 16.602 11.9939 16.602ZM16.8009 8.263C16.6593 8.26313 16.5191 8.23534 16.3883 8.18121C16.2574 8.12708 16.1385 8.04768 16.0384 7.94755C15.9383 7.84743 15.8589 7.72854 15.8047 7.59769C15.7506 7.46684 15.7228 7.3266 15.7229 7.185C15.7229 7.0435 15.7508 6.90339 15.805 6.77266C15.8591 6.64193 15.9385 6.52315 16.0385 6.42309C16.1386 6.32304 16.2574 6.24367 16.3881 6.18952C16.5188 6.13537 16.6589 6.1075 16.8004 6.1075C16.9419 6.1075 17.0821 6.13537 17.2128 6.18952C17.3435 6.24367 17.4623 6.32304 17.5624 6.42309C17.6624 6.52315 17.7418 6.64193 17.7959 6.77266C17.8501 6.90339 17.8779 7.0435 17.8779 7.185C17.8779 7.781 17.3959 8.263 16.8009 8.263Z" fill="#AE7B3C"/>
+                        <path d="M11.994 14.982C13.6525 14.982 14.997 13.6375 14.997 11.979C14.997 10.3205 13.6525 8.976 11.994 8.976C10.3355 8.976 8.99097 10.3205 8.99097 11.979C8.99097 13.6375 10.3355 14.982 11.994 14.982Z" fill="#AE7B3C"/>
+                        </svg>
+                        
+                        </a>
+                    <a href="#!"><svg width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_212_157)">
+                        <path d="M2.55277 20.5746V10.9204H0V7.44441H2.55277V4.47548C2.55277 2.14247 4.0607 0 7.53529 0C8.9421 0 9.98237 0.134866 9.98237 0.134866L9.9004 3.38083C9.9004 3.38083 8.83949 3.3705 7.68178 3.3705C6.42879 3.3705 6.22804 3.94793 6.22804 4.90631V7.44441H10L9.83588 10.9204H6.22804V20.5746H2.55277Z" fill="#AE7B3C"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_212_157">
+                        <rect width="10" height="20.5746" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        </a>
+                </div>
+                <div class="contact__phone">
+                    <a href="#!"><img src="./image/phone.svg" alt="image"><span>+380 67661 5415</span></a>
+                </div>
+            </div>
+            <div class="burger">
+                <span class="burger-line_first"></span>
+                <span class="burger-line_second"></span>
+                <span class="burger-line_third"></span>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main">
+        <section class="intro">
+            <div class="swiper intro__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide intro__slide">
+                        <img src="./image/intro-1.jpg" alt="image">
+                        <div class="intro__content intro__content-first">
+                            <h1>Complex interior furnishing</h1>
+                            <p>We are created to perform object tasks of complex furnishing of residential and commercial premises. 
+                                Our team is focused on the result -
+                                timely implementation of the project at the highest level. We ensure your peace of mind and undertake the solution of any problems. 
+                               </p>
+                            <a href="#!" class="site-button site-button_form">Discuss project</a>
+                        </div>
+                        <div class="owerlay"></div>
+                    </div>
+                    <div class="swiper-slide intro__slide">
+                        <img src="./image/intro-2.jpg" alt="image">
+                        <div class="intro__content">
+                            <h1>The interior design</h1>
+                            <p>In design, we combine stylish ideas with practical ergonomics and the ability to accurately implement visualization. Our interior is your individual space, a comfort zone in life and work</p>
+                            <a href="#!" class="site-button site-button_form">Discuss project</a>
+                        </div>
+                        <div class="owerlay"></div>
+                    </div>
+                    <div class="swiper-slide intro__slide">
+                        <img src="./image/intro-3.jpg" alt="image">
+                        <div class="intro__content">
+                            <h1>Production of furniture</h1>
+                            <p class="p-last">We carry out complex production of cabinet furniture for residential and commercial premises, we will provide you with a high-quality furniture product of our own production.</p>
+                            <a href="#!" class="site-button site-button_form">Discuss project</a>
+                        </div>
+                        <div class="owerlay"></div>
+                    </div>
+                </div>
+                <div class="intro__swiper-nav">
+                    <div class="intro__button-wrap">
+                        <div class="intro__button intro__button-prev">
+                            <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.292893 7.29289C-0.0976314 7.68342 -0.0976315 8.31658 0.292892 8.7071L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31946 8.07107 0.928931C7.68054 0.538407 7.04738 0.538407 6.65686 0.928931L0.292893 7.29289ZM21 7L1 7L1 9L21 9L21 7Z" fill="white"/>
+                            </svg>                        
+                        </div>
+                        <div class="intro__button intro__button-next">
+                            <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928932C13.9526 0.538408 13.3195 0.538408 12.9289 0.928932C12.5384 1.31946 12.5384 1.95262 12.9289 2.34315L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM0 9H20V7H0V9Z" fill="white"/>
+                            </svg>                        
+                        </div>
+                    </div>
+                    <div class="intro__pagination"></div>
+                </div>
+              </div>
+        </section>
+        <section class="direction" id="direction">
+            <div class="container">
+                <h2>Main directions</h2>
+                <div class="direction__cards">
+                    <div class="direction__card">
+                        <span>01</span>
+                        <h5>The interior design</h5>
+                        <img src="./image/direction-1.jpg" alt="image">
+                    </div>
+                    <div class="direction__card">
+                        <span>02</span>
+                        <h5>Production of furniture</h5>
+                        <img src="./image/direction-2.jpg" alt="image">
+                    </div>
+                    <div class="direction__card">
+                        <span>03</span>
+                        <h5>Complex furnishing</h5>
+                        <img src="./image/direction-3.jpg" alt="image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products">
+            <div class="container">
+                <h2>We have you covered</h2>
+                <div class="products__cards">
+                    <div class="products__card">
+                        <img src="./image/products-1.svg" alt="image">
+                        <h5 class="h5_m">Furniture</h5>
+                    </div>
+                    <div class="products__card">
+                        <img src="./image/products-2.svg" alt="image">
+                        <h5 class="h5_m">Lighting</h5>
+                    </div>
+                    <div class="products__card">
+                        <img src="./image/products-3.svg" alt="image">
+                        <h5 class="h5_m">Household appliances</h5>
+                    </div>
+                    <div class="products__card">
+                        <img src="./image/products-4.svg" alt="image">
+                        <h5 class="h5_m">Doors</h5>
+                    </div>
+                    <div class="products__card">
+                        <img src="./image/products-5.svg" alt="image">
+                        <h5 class="h5_m">Wall panels and floor covering</h5>
+                    </div>
+                    <div class="products__card">
+                        <img src="./image/products-6.svg" alt="image">
+                        <h5 class="h5_m">Designing</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="container about__container">
+                <div class="js-scroll_container">
+                    <img class="js-scroll" src="./image/about-1.jpg" alt="image">
+                </div>
+                <div class="js-scroll_container">
+                    <img class="js-scroll" src="./image/about-2.jpg" alt="image">
+                </div>
+                <h3>The Ringo Ukraine project was created to fulfill the objective tasks of complex furnishing of residential and commercial premises.</h3>
+                <div class="about__cards">
+                    <div class="about__card">
+                        <i class="card__radio"><span></span></i>
+                        <p>Our team is focused on the result - timely implementation of the project at the highest level. We ensure the customer's peace of mind and solve any problems</p>    
+                    </div>
+                    <div class="about__card">
+                        <i class="card__radio"><span></span></i>
+                        <p>Ringo is the best contractor for a foreman, designer, project manager or personal assistant to a business, apartment or salon owner</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="benefits" id="benefits">
+            <div class="container benefits__container">
+                <h2>Our advantages</h2>
+                <div class="benefits__cards">
+                    <div class="benefits__card">
+                        <div class="benefits__image-wrap">
+                            <h5>01</h5>
+                            <img src="./image/benefits-1.jpg" alt="image">
+                        </div>
+                        <div class="benefits__content">
+                            <h4>Mobility</h4>
+                            <p>We hold meetings at facilities in cozy establishments in Kyiv</p>
+                            
+                        </div>
+                    </div>
+                    <div class="benefits__card">
+                        <div class="benefits__image-wrap">
+                            <h5>02</h5>
+                           <img src="./image/benefits-2.jpg" alt="image"> 
+                        </div>
+                        <div class="benefits__content">
+                            <h4>Reliability</h4>
+                            <p>The system of our work is focused on the quality and terms of completion of the project</p>
+                        </div>
+                    </div>
+                    <div class="benefits__card">
+                        <div class="benefits__image-wrap">
+                            <h5>03</h5>
+                           <img src="./image/benefits-3.jpg" alt="image"> 
+                        </div>
+                        <div class="benefits__content">
+                            <h4>Quality</h4>
+                            <p>We manufacture exclusively from proven European brands</p>
+                        </div>
+                    </div>
+                    <div class="benefits__card">
+                        <div class="benefits__image-wrap">
+                            <h5>04</h5>
+                            <img src="./image/benefits-4.jpg" alt="image">
+                        </div>
+                        <div class="benefits__content">
+                            <h4>Professionalism</h4>
+                            <p>Our team is a club of professionals united in one company</p>
+                        </div>
+                    </div>
+                    <div class="benefits__card">
+                        <div class="benefits__image-wrap">
+                            <h5>05</h5>
+                            <img src="./image/benefits-5.jpg" alt="image">    
+                        </div>
+                        <div class="benefits__content">
+                            <h4>Profitability</h4>
+                            <p>We ditched the showroom and office in favor of value and mobility</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts" id="contacts">
+            <div class="contacts__text-wrap">
+                <div class="contacts__wrap">
+                    <h2>Shall we discuss your project?</h2>
+                    <p>Fill out the form and we will contact you soon!</p>
+                </div>
+                <form method="post" class="contacts__form">
+                    <div>
+                        <input type="text" id="userName" placeholder="Name">
+                    </div>
+                    <div>
+                        <input type="number" id="userNumber" placeholder="Phone number">
+                    </div>
+                    <div class="userFile">
+                        <label for="userFile">
+                            <img src="./image/inputFile.svg" alt="image">
+                            <span>Attach the project</span>
+                        </label>
+                        <input type="file" name="userFile" id="userFile">
+                    </div>
+                    <button class="site-button contacts__button">Submit</button>
+                    <div class="contacts__checkbox-wrap">
+                        <i class="accept"><span></span></i>
+                        <p>I agree to the processing of personal data</p>
+                        <input type="hidden">
+                    </div>
+                </form>
+            </div>
+            <div class="contacts__pic">
+                <img src="./image/contact-pic.jpg" alt="image">
+            </div>
+        </section>
+        <section class="steps" id="steps">
+            <div class="container steps__container">
+                <h2>Stages of work</h2>
+                <ul class="steps__cards">
+                    <li class="steps__card">
+                        <h6>Signing the contract</h6>
+                        <p>We decide on the budget, materials and accessories.
+                             We make changes to the project,
+                             we sign a package of documents.</p>
+                    </li>
+                    <li class="steps__card">
+                        <h6>Production</h6>
+                        <p>After signing the contract and defining the terms, Ringo's team begins to
+                             the most interesting - production!</p>
+                    </li>
+                    <li class="steps__card">
+                        <h6>Installation</h6>
+                        <p>When production is ready, we start installation at the facility. We deliver and install at the agreed time.</p>
+                    </li>
+                    <li class="steps__card">
+                        <h6>Housewarming</h6>
+                        <p>Upon completion, we check and sign the act of completion of work.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="work" id="work">
+            <h2>Now at work</h2>
+            <div class="swiper work__swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide work__slide">
+                    <div class="work__slide_shadow"></div>
+                    <img src="./image/work-pic.jpg" alt="image">
+                    <div class="work__content">
+                        <h5>Apartment residential complex Medovy</h5>
+                        <p>Stage 3</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide work__slide">
+                    <div class="work__slide_shadow"></div>
+                    <img src="./image/work-pic.jpg" alt="image">
+                    <div class="work__content">
+                        <h5>Apartment residential complex Medovy</h5>
+                        <p>Stage 3</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide work__slide">
+                    <div class="work__slide_shadow"></div>
+                    <img src="./image/work-pic.jpg" alt="image">
+                    <div class="work__content">
+                        <h5>Apartment residential complex Medovy</h5>
+                        <p>Stage 3</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide work__slide">
+                    <div class="work__slide_shadow"></div>
+                    <img src="./image/work-pic.jpg" alt="image">
+                    <div class="work__content">
+                        <h5>Apartment residential complex Medovy</h5>
+                        <p>Stage 3</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide work__slide">
+                    <div class="work__slide_shadow"></div>
+                    <img src="./image/work-pic.jpg" alt="image">
+                    <div class="work__content">
+                        <h5>Apartment residential complex Medovy</h5>
+                        <p>Stage 3</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="work__button_wrap">
+                    <div class="work__button work__button-prev">
+                        <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.292893 7.29289C-0.0976314 7.68342 -0.0976315 8.31658 0.292892 8.7071L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34314C8.46159 1.95262 8.46159 1.31946 8.07107 0.928931C7.68054 0.538407 7.04738 0.538407 6.65686 0.928931L0.292893 7.29289ZM21 7L1 7L1 9L21 9L21 7Z" fill="#282B22"/>
+                        </svg>   
+                    </div>
+                    <div class="work__button work__button-next">
+                        <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928932C13.9526 0.538408 13.3195 0.538408 12.9289 0.928932C12.5384 1.31946 12.5384 1.95262 12.9289 2.34315L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM0 9H20V7H0V9Z" fill="#282B22"/>
+                        </svg>                        
+                    </div>
+                </div>
+                <div class="work__pagination"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inform">
+                <div class="footer__column">
+                    <a href="#!" class="footer__logo"><img src="./image/logo.svg" alt="image"></a>
+                    <div class="footer__social">
+                        <span>Social networks:</span>
+                        <a href="#!">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.9469 8.305C20.9369 7.54762 20.7951 6.79777 20.5279 6.089C20.2963 5.49115 19.9425 4.9482 19.4891 4.49483C19.0358 4.04146 18.4928 3.68765 17.8949 3.456C17.1953 3.19336 16.4561 3.05134 15.7089 3.036C14.7469 2.993 14.4419 2.981 11.9999 2.981C9.55795 2.981 9.24495 2.981 8.28995 3.036C7.54311 3.05145 6.8043 3.19347 6.10495 3.456C5.50701 3.68749 4.96397 4.04124 4.51058 4.49463C4.05719 4.94802 3.70344 5.49106 3.47195 6.089C3.20878 6.78813 3.06707 7.52711 3.05295 8.274C3.00995 9.237 2.99695 9.542 2.99695 11.984C2.99695 14.426 2.99695 14.738 3.05295 15.694C3.06795 16.442 3.20895 17.18 3.47195 17.881C3.70383 18.4788 4.05784 19.0216 4.51138 19.4748C4.96492 19.928 5.50801 20.2816 6.10595 20.513C6.80338 20.7862 7.54232 20.9384 8.29095 20.963C9.25395 21.006 9.55895 21.019 12.0009 21.019C14.4429 21.019 14.7559 21.019 15.7109 20.963C16.4581 20.9483 17.1973 20.8066 17.8969 20.544C18.4946 20.3121 19.0375 19.9582 19.4908 19.5048C19.9441 19.0515 20.298 18.5087 20.5299 17.911C20.7929 17.211 20.9339 16.473 20.9489 15.724C20.9919 14.762 21.0049 14.457 21.0049 12.014C21.0029 9.572 21.0029 9.262 20.9469 8.305ZM11.9939 16.602C9.43995 16.602 7.37095 14.533 7.37095 11.979C7.37095 9.425 9.43995 7.356 11.9939 7.356C13.22 7.356 14.3959 7.84306 15.2629 8.71004C16.1299 9.57703 16.6169 10.7529 16.6169 11.979C16.6169 13.2051 16.1299 14.381 15.2629 15.248C14.3959 16.1149 13.22 16.602 11.9939 16.602ZM16.8009 8.263C16.6593 8.26313 16.5191 8.23534 16.3883 8.18121C16.2574 8.12708 16.1385 8.04768 16.0384 7.94755C15.9383 7.84743 15.8589 7.72854 15.8047 7.59769C15.7506 7.46684 15.7228 7.3266 15.7229 7.185C15.7229 7.0435 15.7508 6.90339 15.805 6.77266C15.8591 6.64193 15.9385 6.52315 16.0385 6.42309C16.1386 6.32304 16.2574 6.24367 16.3881 6.18952C16.5188 6.13537 16.6589 6.1075 16.8004 6.1075C16.9419 6.1075 17.0821 6.13537 17.2128 6.18952C17.3435 6.24367 17.4623 6.32304 17.5624 6.42309C17.6624 6.52315 17.7418 6.64193 17.7959 6.77266C17.8501 6.90339 17.8779 7.0435 17.8779 7.185C17.8779 7.781 17.3959 8.263 16.8009 8.263Z" fill="#AE7B3C"/>
+                                <path d="M11.994 14.982C13.6525 14.982 14.997 13.6375 14.997 11.979C14.997 10.3205 13.6525 8.976 11.994 8.976C10.3355 8.976 8.99097 10.3205 8.99097 11.979C8.99097 13.6375 10.3355 14.982 11.994 14.982Z" fill="#AE7B3C"/>
+                            </svg>                                
+                        </a>
+                        <a href="#!">
+                            <svg width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_227_180)">
+                                <path d="M2.55277 20.5746V10.9204H0V7.44441H2.55277V4.47548C2.55277 2.14247 4.0607 0 7.53529 0C8.9421 0 9.98237 0.134866 9.98237 0.134866L9.9004 3.38083C9.9004 3.38083 8.83949 3.3705 7.68178 3.3705C6.42879 3.3705 6.22804 3.94793 6.22804 4.90631V7.44441H10L9.83588 10.9204H6.22804V20.5746H2.55277Z" fill="#AE7B3C"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_227_180">
+                                <rect width="10" height="20.5746" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>                                
+                        </a>
+                    </div>
+                </div>
+                <nav class="footer__column">
+                    <ul class="footer__menu">
+                        <li><a href="#direction">Main directions</a></li>
+                        <li><a href="#about">About company</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#steps">Stage works</a></li>
+                        <li><a href="#work">Now at work</a></li>
+                        <li><a href="#contacts">Become a partner</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__column">
+                    <a href="#!" class="footer__phone"><img src="./image/phone.svg" alt="image"><span>+380 67661 5415</span></a>
+                    <button class="site-button site-button_form">For coffee with the manager!</button>
+                </div>
+            </div>   
+            <div class="footer__brands">
+                <p>Brands of components</p>
+                <div class="footer__brands_wrap">
+                    <img class="brand-1" src="./image/brand-1.svg" alt="image">
+                    <img class="brand-1-active" src="./image/brand-1-active.svg" alt="image">
+                    <img class="brand-2" src="./image/brand-2.svg" alt="image">
+                    <img class="brand-2-active" src="./image/brand-2-active.svg" alt="image">
+                    <img class="brand-3" src="./image/brand-3.svg" alt="image">
+                    <img class="brand-4" src="./image/brand-4.svg" alt="image">
+                    <svg width="92" height="17" viewBox="0 0 92 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.6">
+                        <path opacity="0.5" d="M0.245678 0.631836C1.12192 0.694336 1.22907 0.915336 1.22907 1.19634V15.8038C1.22907 16.0848 1.12136 16.3028 0.245117 16.3653V16.7453H7.47385V16.3653C6.59648 16.3028 6.49326 16.0848 6.49326 15.8038V1.19634C6.49326 0.915336 6.59648 0.694336 7.47385 0.631836V0.255336H0.245678V0.631836ZM24.1943 0.631836C24.6492 0.664336 24.9297 0.819836 24.9297 1.19634V9.56484C22.4755 7.15034 16.4085 1.38584 16.4085 1.03834C16.4085 0.853336 16.583 0.664336 17.3891 0.631836V0.255336H8.93519V0.631836C9.81256 0.694336 9.91634 0.915336 9.91634 1.19634V15.8038C9.91634 16.0848 9.81256 16.3028 8.93519 16.3653V16.7453H15.6024V16.3653C14.7228 16.3028 14.6184 16.0848 14.6184 15.8038V5.96034C23.8773 15.2093 24.7564 15.6153 24.7564 16.0228C24.7564 16.2418 24.5791 16.3658 23.9469 16.3658V16.7458H30.613V16.3658C29.7362 16.3033 29.6329 16.0853 29.6329 15.8043V1.19634C29.6329 0.915336 29.7362 0.694336 30.613 0.631836V0.255336H24.1943V0.631836ZM52.7693 8.50034C52.7693 3.01384 47.7906 0.0693359 41.8257 0.0693359C35.8615 0.0693359 30.8839 3.01384 30.8839 8.50034C30.8839 13.9843 35.8615 16.9308 41.8257 16.9308C47.7906 16.9308 52.7693 13.9848 52.7693 8.50034ZM41.8257 13.1068C38.778 13.1068 36.0724 11.4478 36.0724 8.50084C36.0724 5.55384 38.778 3.89284 41.8257 3.89284C44.8786 3.89284 47.578 5.55434 47.578 8.50084C47.578 11.4478 44.8786 13.1068 41.8257 13.1068ZM90.7714 15.4278C88.5965 10.6633 84.2837 1.28934 84.2837 1.03834C84.2837 0.727836 84.53 0.664336 84.9176 0.631836V0.255336H75.7569V0.631836C76.075 0.664336 76.4598 0.727836 76.4598 0.945336C76.4598 1.12034 71.388 12.9368 70.3828 15.2698L64.0897 8.15334L70.5449 1.00834C70.7199 0.819836 71.0363 0.664336 71.4211 0.631836V0.255336H63.3896V0.631836C63.6713 0.631836 64.1262 0.694336 64.1262 1.03834C64.1262 1.32184 61.4234 3.98734 60.8989 4.61284C60.5472 4.17634 57.6705 1.25684 57.6705 1.03834C57.6705 0.727836 57.9521 0.664336 58.5136 0.631836V0.255336H50.306V0.631836C50.5136 0.631836 50.7935 0.694336 51.1088 1.03834L57.634 8.37484L50.619 15.8343C50.2668 16.2083 50.0581 16.3653 49.8135 16.3653V16.7453H57.9134V16.3653C57.6329 16.3653 57.0731 16.3653 57.0731 16.0223C57.0731 15.5858 60.3357 12.5438 60.8243 11.9158C62.2991 13.6403 64.299 15.8658 64.299 16.2078C64.299 16.3648 63.9815 16.3648 63.6337 16.3648V16.7448H75.5112V16.3648C75.0204 16.3648 74.8796 16.2408 74.8796 16.0543C74.8796 15.8658 75.0933 15.4598 76.0026 13.1678H84.3146C84.4554 13.5768 85.5089 15.8658 85.5089 15.9903C85.5089 16.1808 85.3345 16.3333 84.843 16.3653V16.7453H91.7531V16.3653C91.3335 16.3653 91.1237 16.1808 90.7714 15.4278ZM76.8806 10.6633L80.0024 3.20184L83.4058 10.6633H76.8806Z" fill="#282B22"/>
+                        </g>
+                    </svg>
+                    <img class="brand-6" src="./image/brand-6.svg" alt="image">
+                    <img class="brand-7" src="./image/brand-7.svg" alt="image">
+                    <img class="brand-8" src="./image/brand-8.svg" alt="image">
+                    <img class="brand-8-active" src="./image/brand-8-active.svg" alt="image">
+                    <img class="brand-9" src="./image/brand-9.svg" alt="image">
+                </div>
+                <div class="footer__copyright"><p>© 2022 Ringo</p></div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="form_pop">
+        <div class="form_pop_wrap">
+            <h4>Do you want to become our partner?</h4>
+            <p>Fill out the form and we will contact you to discuss all the details</p>
+            <form action="#" class="contacts__form">
+                <div>
+                    <input type="text" type="name" placeholder="Name">
+                </div>
+                <div>
+                    <input type="text" type="number" placeholder="Phone number">
+                </div>
+                <div>
+                    <textarea name="userText" id="" placeholder="Shortly about myself"></textarea>
+                </div>
+                <button class="site-button">Submit</button>
+                <div class="contacts__checkbox-wrap">
+                    <i class="accept"><span></span></i>
+                    <p>I agree to the processing of personal data</p>
+                </div>
+            </form>
+            <div class="form__closed">
+                <span class="form__closed_line form__closed_line-first"></span>
+                <span class="form__closed_line form__closed_line-second"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/validate-form.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
